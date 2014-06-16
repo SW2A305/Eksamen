@@ -43,7 +43,9 @@
 *.mtc
 *.mtc1
 master.pdf
+*.nav
 *.out
+*.snm
 *.synctex.gz
 *.fdb_latexmk
 
