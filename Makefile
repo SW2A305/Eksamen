@@ -12,5 +12,6 @@ OTHER = *~ *.aux *.dvi *.toc *.bbl *.blg *.gz *.out *.thm *.ps *.idx *.ilg *.ind
 pdflatex: master.tex
 	pdflatex --synctex=1 master.tex
 	pdflatex --synctex=1 master.tex
+	pdflatex --synctex=1 master.tex
 clean:
 	git clean -x -f -e master.pdf
