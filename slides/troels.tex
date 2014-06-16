@@ -60,6 +60,9 @@ Udvalgte user stories:
 	\node (efdal) [lille, below of=sqldal] {EF Dal};
 	\node (sql) [lille, right=0.5cm of sqldal] {SQLite};
 	\node (ef) [lille, below of=sql,align=center] {Entity\\ Framework};
+	\node (mockdal) [lille, above of=sqldal] {MockDal};
+	\node (mock) [lille, right=0.5cm of mockdal] {Mock};
+
 	%pointers laves
 	\draw [line] (uixaml) -- (cb);
 	\draw [line] (cb) -| (idal);
@@ -69,6 +72,8 @@ Udvalgte user stories:
 	\draw [line] (idal) to [bend right] (efdal);
 	\draw [line] (sqldal) -- (sql);
 	\draw [line] (efdal) -- (ef);
+	\draw [line] (idal) to [bend left] (mockdal);
+	\draw [line] (mockdal) -- (mock);
 	\end{tikzpicture}
 	\caption{Programopbygning: Figuren viser sammenhængen mellem de forskellige komponenter i programmet.}
 	\label{img:Program_flow}
