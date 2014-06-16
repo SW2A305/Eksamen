@@ -1,5 +1,9 @@
 \section{Datalag}
 
+\definecolor{positivegreen}{rgb}{0,0.7,0}
+\definecolor{negativeyellow}{rgb}{0.8,0.8,0}
+\definecolor{badred}{rgb}{0.8,0,0}
+
 
 \subsection{Modellag}
 
@@ -16,19 +20,29 @@
 \begin{frame}{Persistenslag}
   \framesubtitle{Entity Framework --- Code First}
   \begin{itemize}
-    \item<1-> Isolering af databaselogik (SQL--forespørgsler)
-    \item<1-> POCO (Plain Old CLR Objects)
-    \item<1-> RAD (Rapid Application Development)
-    \item<2-> Migrations
-    \item<2-> Data Annotations
-    \item<3-> Context levetid
+    \item<1-> \color{positivegreen}Isolering af databaselogik (SQL--forespørgsler)
+    \item<1-> \color{positivegreen}POCO (Plain Old CLR Objects)
+    \item<1-> \color{positivegreen}RAD (Rapid Application Development)
+    \item<2-> \color{negativeyellow}Migrations
+    \item<2-> \color{negativeyellow}Data Annotations
+    \item<3-> \color{badred}Context levetid
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{SQLite}
   \begin{itemize}
-    \item<1-> Kræver kendskab til SQL.
-    \item<1-> Komplekse relationer er svære.
+    \item<1-> \color{positivegreen}Kræver kendskab til SQL.
+    \item<1-> \color{positivegreen}Komplekse relationer kan være svære.
+    \item<1-> \color{negativeyellow}Fuld kontrol over det underliggende.
+    \item<2-> \color{negativeyellow}Enkeltbrugersystem --- Ikke thread--safe.
+    \item<3-> \color{badred}''Database is locked``
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Persistenslag}
+  \framesubtitle{Mock--data med persistens}
+  \begin{itemize}
+    \item<1-> 
   \end{itemize}
 \end{frame}
