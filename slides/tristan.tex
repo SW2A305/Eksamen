@@ -1,17 +1,13 @@
 \section{Datalag}
 
-\definecolor{positivegreen}{rgb}{0,0.7,0}
-\definecolor{negativeyellow}{rgb}{0.8,0.8,0}
-\definecolor{badred}{rgb}{0.8,0,0}
-
 
 \subsection{Modellag}
 
 \begin{frame}{Modellag}
-  \framesubtitle{Umm\ldots}
-  \begin{itemize}
-    \item<1-> What to put here\ldots
-  \end{itemize}
+  \framesubtitle{UML--diagram}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/UML.png}
+  \end{center}
 \end{frame}
 
 
@@ -20,31 +16,57 @@
 \begin{frame}{Persistenslag}
   \framesubtitle{Entity Framework --- Code First}
   \begin{itemize}
-    \item<1-> \color{positivegreen}Isolering af databaselogik (SQL--forespørgsler)
-    \item<1-> \color{positivegreen}POCO (Plain Old CLR Objects)
-    \item<1-> \color{positivegreen}RAD (Rapid Application Development)
-    \item<2-> \color{negativeyellow}Migrations
-    \item<2-> \color{negativeyellow}Data Annotations
-    \item<3-> \color{badred}Context levetid
+    \item<1-> Fordele
+    \begin{itemize}
+      \item<1-> Isolering af databaselogik (SQL--forespørgsler)
+      \item<1-> POCO (Plain Old CLR Objects)
+      \item<1-> RAD (Rapid Application Development)
+    \end{itemize}
+    \item<2-> Ulemper
+    \begin{itemize}
+      \item<2-> Migrations
+      \item<2-> Data Annotations
+    \end{itemize}
+    \item<3-> Forhindringer
+    \begin{itemize}
+      \item<3-> Context levetid
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{SQLite}
   \begin{itemize}
-    \item<1-> \color{positivegreen}Kræver kendskab til SQL.
-    \item<1-> \color{positivegreen}Komplekse relationer kan være svære.
-    \item<1-> \color{positivegreen}Fuld kontrol over det underliggende.
-    \item<2-> \color{negativeyellow}Enkeltbrugersystem --- Ikke thread--safe.
-    \item<3-> \color{badred}''Database is locked``
+    \item<1-> Fordele
+    \begin{itemize}
+      \item<1-> Fuld kontrol over det underliggende.
+    \end{itemize}
+    \item<2-> Ulemper
+    \begin{itemize}
+      \item<2-> Kræver kendskab til SQL.
+      \item<2-> Komplekse relationer kan være svære.
+    \end{itemize}
+    \item<3-> Forhindringer
+    \begin{itemize}
+      \item<3-> Enkeltbrugersystem --- Ikke thread--safe.
+      \begin{itemize}
+        \item<3-> ''Database is locked``
+      \end{itemize}
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{Mock--data med persistens}
   \begin{itemize}
-    \item<1-> \color{positivegreen}Hurtigt --- Hukommelsesbaseret.
-    \item<2-> \color{negativeyellow}Ikke skalerbart.
-    \item<2-> \color{negativeyellow}Risiko for datatab.
+    \item<1-> Fordele
+    \begin{itemize}
+      \item<1-> Hurtigt --- Hukommelsesbaseret.
+    \end{itemize}
+    \item<2-> Ulemper
+    \begin{itemize}
+      \item<2-> Ikke skalerbart.
+      \item<2-> Risiko for datatab.
+    \end{itemize}
   \end{itemize}
 \end{frame}
