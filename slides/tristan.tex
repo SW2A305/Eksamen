@@ -1,8 +1,5 @@
 \section{Datalag}
 
-\setbeamercolor{headerCol}{fg=black,bg=lightgray}
-\setbeamercolor{bodyCol}{fg=white,bg=gray}
-
 \subsection{Modellag}
 
 \begin{frame}{Modellag}
@@ -17,26 +14,30 @@
 
 \begin{frame}{Persistenslag}
   \framesubtitle{Entity Framework --- Code First}
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
-    \begin{itemize}
-      \item Isolering af databaselogik (SQL--forespørgsler)
-      \item POCO (Plain Old CLR Objects)
-      \item RAD (Rapid Application Development)
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
-    \begin{itemize}
-      \item Migrations
-      \item Data Annotations
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
-    \begin{itemize}
-      \item Context levetid
-    \end{itemize}
-  \end{beamerboxesrounded}
+  \onslide<1>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
+      \begin{itemize}
+        \item Isolering af databaselogik (SQL--forespørgsler)
+        \item POCO (Plain Old CLR Objects)
+        \item RAD (Rapid Application Development)
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<2>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
+      \begin{itemize}
+        \item Migrations
+        \item Data Annotations
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<3>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
+      \begin{itemize}
+        \item Context levetid
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
 \end{frame}
 
 \begin{frame}{Persistenslag}
