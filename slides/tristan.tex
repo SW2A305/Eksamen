@@ -1,5 +1,7 @@
 \section{Datalag}
 
+\setbeamercolor{headerCol}{fg=black,bg=lightgray}
+\setbeamercolor{bodyCol}{fg=white,bg=gray}
 
 \subsection{Modellag}
 
@@ -15,58 +17,65 @@
 
 \begin{frame}{Persistenslag}
   \framesubtitle{Entity Framework --- Code First}
-  \begin{itemize}
-    \item<1-> Fordele
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
     \begin{itemize}
-      \item<1-> Isolering af databaselogik (SQL--forespørgsler)
-      \item<1-> POCO (Plain Old CLR Objects)
-      \item<1-> RAD (Rapid Application Development)
+      \item Isolering af databaselogik (SQL--forespørgsler)
+      \item POCO (Plain Old CLR Objects)
+      \item RAD (Rapid Application Development)
     \end{itemize}
-    \item<2-> Ulemper
+  \end{beamerboxesrounded}
+  \pause
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
     \begin{itemize}
-      \item<2-> Migrations
-      \item<2-> Data Annotations
+      \item Migrations
+      \item Data Annotations
     \end{itemize}
-    \item<3-> Forhindringer
+  \end{beamerboxesrounded}
+  \pause
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
     \begin{itemize}
-      \item<3-> Context levetid
+      \item Context levetid
     \end{itemize}
-  \end{itemize}
+  \end{beamerboxesrounded}
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{SQLite}
-  \begin{itemize}
-    \item<1-> Fordele
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
     \begin{itemize}
-      \item<1-> Fuld kontrol over det underliggende.
+      \item Fuld kontrol over det underliggende.
     \end{itemize}
-    \item<2-> Ulemper
+  \end{beamerboxesrounded}
+  \pause
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
     \begin{itemize}
-      \item<2-> Kræver kendskab til SQL.
-      \item<2-> Komplekse relationer kan være svære.
+      \item Kræver kendskab til SQL.
+      \item Komplekse relationer kan være svære.
     \end{itemize}
-    \item<3-> Forhindringer
+  \end{beamerboxesrounded}
+  \pause
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
     \begin{itemize}
-      \item<3-> Enkeltbrugersystem --- Ikke thread--safe.
+      \item Enkeltbrugersystem --- Ikke thread--safe.
       \begin{itemize}
-        \item<3-> ''Database is locked``
+        \item ''Database is locked``
       \end{itemize}
     \end{itemize}
-  \end{itemize}
+  \end{beamerboxesrounded}
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{Mock--data med persistens}
-  \begin{itemize}
-    \item<1-> Fordele
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
     \begin{itemize}
-      \item<1-> Hurtigt --- Hukommelsesbaseret.
+      \item Hurtigt --- Hukommelsesbaseret.
     \end{itemize}
-    \item<2-> Ulemper
+  \end{beamerboxesrounded}
+  \pause
+  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
     \begin{itemize}
-      \item<2-> Ikke skalerbart.
-      \item<2-> Risiko for datatab.
+      \item Ikke skalerbart.
+      \item Risiko for datatab.
     \end{itemize}
-  \end{itemize}
+  \end{beamerboxesrounded}
 \end{frame}
