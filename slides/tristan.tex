@@ -8,10 +8,10 @@
     \item Interface versus Implementation
     \item CRUD
     \begin{itemize}
-      \item \texttt{\textbf{C}reate}
-      \item \texttt{\textbf{R}etrieve}
-      \item \texttt{\textbf{U}pdate}
-      \item \texttt{\textbf{D}elete}
+      \item \texttt{{\Large C}reate}
+      \item \texttt{{\Large R}etrieve}
+      \item \texttt{{\Large U}pdate}
+      \item \texttt{{\Large D}elete}
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -31,7 +31,7 @@
 \begin{frame}{Modellag}
   \framesubtitle{UML--diagram}
   \begin{center}
-    \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/UML.png}
+    \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/UML.pdf}
   \end{center}
 \end{frame}
 
@@ -71,6 +71,13 @@
   \onslide<1>{%
     \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
       \begin{itemize}
+        \item God kompatibilitet med CRUD.
+        \begin{description}
+          \item[Create] \texttt{INSERT}
+          \item[Retrieve] \texttt{SELECT}
+          \item[Update] \texttt{UPDATE}
+          \item[Delete] \texttt{DELETE}
+        \end{description}
         \item Fuld kontrol over det underliggende.
       \end{itemize}
     \end{beamerboxesrounded}%
