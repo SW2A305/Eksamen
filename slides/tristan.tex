@@ -1,7 +1,30 @@
 \section{Datalag}
 
-\setbeamercolor{headerCol}{fg=black,bg=lightgray}
-\setbeamercolor{bodyCol}{fg=white,bg=gray}
+\subsection{DAL}
+
+\begin{frame}{DAL --- Data Access Layer}
+  \framesubtitle{Overblik}
+  \begin{itemize}
+    \item Interface versus Implementation
+    \item CRUD
+    \begin{itemize}
+      \item \texttt{\textbf{C}reate}
+      \item \texttt{\textbf{R}etrieve}
+      \item \texttt{\textbf{U}pdate}
+      \item \texttt{\textbf{D}elete}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{DAL --- Data Access Layer}
+  \framesubtitle{Databaserelationer}
+  \begin{itemize}
+    \item One--to--one
+    \item One--to--many
+    \item Many--to--many
+  \end{itemize}
+\end{frame}
+
 
 \subsection{Modellag}
 
@@ -17,65 +40,76 @@
 
 \begin{frame}{Persistenslag}
   \framesubtitle{Entity Framework --- Code First}
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
-    \begin{itemize}
-      \item Isolering af databaselogik (SQL--forespørgsler)
-      \item POCO (Plain Old CLR Objects)
-      \item RAD (Rapid Application Development)
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
-    \begin{itemize}
-      \item Migrations
-      \item Data Annotations
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
-    \begin{itemize}
-      \item Context levetid
-    \end{itemize}
-  \end{beamerboxesrounded}
+  \onslide<1>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
+      \begin{itemize}
+        \item Isolering af databaselogik (SQL--forespørgsler)
+        \item POCO (Plain Old CLR Objects)
+        \item RAD (Rapid Application Development)
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<2>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
+      \begin{itemize}
+        \item Migrations
+        \item Data Annotations
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<3>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
+      \begin{itemize}
+        \item Context levetid
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{SQLite}
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
-    \begin{itemize}
-      \item Fuld kontrol over det underliggende.
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
-    \begin{itemize}
-      \item Kræver kendskab til SQL.
-      \item Komplekse relationer kan være svære.
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
-    \begin{itemize}
-      \item Enkeltbrugersystem --- Ikke thread--safe.
+  \onslide<1>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
       \begin{itemize}
-        \item ''Database is locked``
+        \item Fuld kontrol over det underliggende.
       \end{itemize}
-    \end{itemize}
-  \end{beamerboxesrounded}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<2>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
+      \begin{itemize}
+        \item Kræver kendskab til SQL.
+        \item Komplekse relationer kan være svære.
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<3>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Forhindringer}
+      \begin{itemize}
+        \item Enkeltbrugersystem --- Ikke thread--safe.
+        \begin{itemize}
+          \item ''Database is locked``
+        \end{itemize}
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
 \end{frame}
 
 \begin{frame}{Persistenslag}
   \framesubtitle{Mock--data med persistens}
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
-    \begin{itemize}
-      \item Hurtigt --- Hukommelsesbaseret.
-    \end{itemize}
-  \end{beamerboxesrounded}
-  \pause
-  \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
-    \begin{itemize}
-      \item Ikke skalerbart.
-      \item Risiko for datatab.
-    \end{itemize}
-  \end{beamerboxesrounded}
+  \onslide<1>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Fordele}
+      \begin{itemize}
+        \item Hurtigt --- Hukommelsesbaseret.
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
+  \onslide<2>{%
+    \begin{beamerboxesrounded}[upper=headerCol,lower=bodyCol,shadow=true]{Ulemper}
+      \begin{itemize}
+        \item Ikke skalerbart.
+        \item Risiko for datatab.
+      \end{itemize}
+    \end{beamerboxesrounded}%
+  }
 \end{frame}
